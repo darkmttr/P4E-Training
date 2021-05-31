@@ -9,7 +9,9 @@ fh = open('mbox-short.txt')
 count = 0
 
 for line in fh :
+    thewords = line.rstrip()
     thewords = line.split()
+    # guardian in a compound statement
     if len(thewords) < 3 or thewords[0] != 'From' :
         continue
     print(thewords[1])
